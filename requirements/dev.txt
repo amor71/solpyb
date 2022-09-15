@@ -1,0 +1,5 @@
+therapist
+codecov
+mypy
+black
+isort
