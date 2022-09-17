@@ -23,7 +23,7 @@ solana_network: str = os.getenv(
 class SolBase:
     sizing = {type(float()): 4, type(int()): 4}
     unpack_type = {type(float()): "f", type(int()): "i"}
-    seed = "solpyb2"
+    seed = "solpyb3"
 
     def __init__(self, program_id: str, payer: Keypair):
         self.program_id = program_id
@@ -117,7 +117,6 @@ class SolBase:
             (int(x), int(str(round(x, 2)).split(".")[1])) for x in args[0]
         ]
         whole, _ = zip(*raw_data)
-
         bytes_data: List = []
         if max(whole) >= 256:
             for tup in raw_data:
