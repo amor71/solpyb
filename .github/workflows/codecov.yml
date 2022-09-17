@@ -38,9 +38,7 @@ jobs:
         run: python -c "import sys; print(sys.version)"
 
       - name: Set Wallet folders
-        run: |
-          mkdir /home/runner/.config
-          mkdir /home/runner/.config/solana
+        run: mkdir /home/runner/.config/solana
 
       - name: Set Wallet For tests
         uses: "finnp/create-file-action@master"
