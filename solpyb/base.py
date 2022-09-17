@@ -14,7 +14,7 @@ from solana.transaction import AccountMeta, Transaction, TransactionInstruction
 
 from solpyb.connectivity import connect, retry
 
-debug_enabled = bool(int(os.getenv("SOLPYB_DEBUG_ENABLED", 1)))
+debug_enabled = bool(int(os.getenv("SOLPYB_DEBUG_ENABLED", 0)))
 solana_network: str = os.getenv(
     "SOLPYB_NETWORK", "https://api.devnet.solana.com"
 )
@@ -108,7 +108,7 @@ class SolBase:
 
         The fractional part is encoded in a single byte rounded to two decimal points.
         Example 1: [10.6, 8.85, 15.678] -> [0 10 6 8 85 15 68]
-        Example 2: [500.123, 878.5, 10] -> [1 1 244 12 3 110 5 0 10 0]
+        Example 2: [500.123, 878.5, 10.0] -> [1 1 244 12 3 110 5 0 10 0]
 
         Input:
             args : assumed to be list of float, overwrite for different implementation.
