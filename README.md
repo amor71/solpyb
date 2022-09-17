@@ -1,5 +1,8 @@
 [![Upload Python Package](https://github.com/amor71/solpyb/actions/workflows/python-publish.yml/badge.svg)](https://github.com/amor71/solpyb/actions/workflows/python-publish.yml)
+[![codecov](https://codecov.io/gh/amor71/solpyb/branch/master/graph/badge.svg?token=gUJ78Gdh6q)](https://codecov.io/gh/amor71/solpyb)
+
 # solpyb
+
 Pythonic Bridge to Solana Programs.
 
 ## Overview
