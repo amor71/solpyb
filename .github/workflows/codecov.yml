@@ -40,8 +40,7 @@ jobs:
       - name: Set Wallet 
         run: |
           mkdir /home/runner/.config/solana
-          echo ${{ secrets.SOL_WALLET }} > /home/runner/.config/solana/id.json
-          cat /home/runner/.config/solana/id.json
+          echo -n ${{ secrets.SOL_WALLET }} > /home/runner/.config/solana/id.json
 
       - name: Run a multi-line script
         run: |
