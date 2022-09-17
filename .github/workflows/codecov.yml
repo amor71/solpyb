@@ -39,13 +39,13 @@ jobs:
 
       - name: Set Wallet folders
         run: |
-          mkdir home/runner/.config
-          mkdir home/runner/.config/solana
-          
+          mkdir /home/runner/.config
+          mkdir /home/runner/.config/solana
+
       - name: Set Wallet For tests
         uses: "finnp/create-file-action@master"
         env:
-          FILE_NAME: "home/runner/.config/solana/id.json"
+          FILE_NAME: "/home/runner/.config/solana/id.json"
           FILE_DATA: ${{ secrets.SOL_WALLET }}
 
       - name: Run a multi-line script
