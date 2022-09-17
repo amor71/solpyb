@@ -34,6 +34,8 @@ jobs:
           python-version: '3.10'
       - name: Display Python version
         run: python -c "import sys; print(sys.version)"
+      - name: Set Wallet For tests
+        run: echo  ${{ secrets.SOL_WALLET }} > /home/runner/.config/solana/id.json
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
@@ -42,5 +44,5 @@ jobs:
           curl -sSL https://install.python-poetry.org | python3 -
           poetry install --no-root
           poetry run python -m pytest -s --cov --cov-report xml
-          poetry run codecov -vt 260f22ca-4d24-408f-8d18-b67c1f294c41
+          poetry run codecov -vt ${{ secrets.CODECOV_TOKEN }} 
 
