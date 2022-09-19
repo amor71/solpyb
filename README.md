@@ -3,7 +3,7 @@
 
 # solpyb
 
-Pythonic Bridge to Solana Programs.
+Pythonic Bridge to Solana Programs. Inspired by [Pydantic](https://pydantic-docs.helpmanual.io/)
 
 ## Overview
 
